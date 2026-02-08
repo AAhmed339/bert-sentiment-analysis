@@ -18,3 +18,16 @@ Given an input sentence, the model predicts:
 ## Example
 ```python
 sentiment("I really love this movie")
+## How to Run
+
+Install the required libraries:
+```bash
+pip install torch transformers
+from transformers import pipeline
+
+sentiment = pipeline(
+    "sentiment-analysis",
+    model="distilbert-base-uncased-finetuned-sst-2-english"
+)
+
+sentiment("I really love this movie")
